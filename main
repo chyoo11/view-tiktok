@@ -1,0 +1,49 @@
+import requests
+
+url = "https://api16-core-c-alisg.tiktokv.com/aweme/v1/aweme/stats/?manifest_version_code=390054&_rticket=1754669953886&app_language=en&app_type=normal&iid=7506830991753021202&app_package=com.tiktok.lite.go&channel=googleplay&device_type=SM-A127F&language=en&host_abi=arm64-v8a&locale=en&resolution=720*1467&openudid=66483099d34d05c4&update_version_code=390054&ac2=wifi&cdid=5674cd4a-1795-41c8-a458-9dc4bb80a886&sys_region=GB&os_api=33&timezone_name=Asia%2FBaghdad&dpi=300&ac=wifi&device_id=7206251281174152709&os=android&os_version=12&timezone_offset=10800&version_code=390054&app_name=musically_go&ab_version=39.0.54&version_name=39.0.54&device_brand=samsung&op_region=IQ&ssmix=a&device_platform=android&build_number=39.0.54&region=GB&aid=1340&ts=1754669867"
+
+payload = {
+  'pre_item_playtime': "",
+  'user_algo_refresh_status': "false",
+  'first_install_time': "1736446210",
+  'item_id': "7468586717268774151",
+  'is_ad': "false",
+  'follow_status': "2",
+  'sync_origin': "false",
+  'follower_status': "1",
+  'action_time': "1754669953",
+  'tab_type': "3",
+  'pre_hot_sentence': "",
+  'play_delta': "1",
+  'request_id': "",
+  'aweme_type': "61",
+  'order': "",
+  'pre_item_id': ""
+}
+
+headers = {
+  'User-Agent': "com.tiktok.lite.go/390054 (Linux; U; Android 13; en_GB; SM-A127F; Build/TP1A.220624.014;tt-ok/3.12.13.34-ul)",
+#  'Accept-Encoding': "gzip, ttzip",
+  'rpc-persist-pyxis-policy-v-tnc': "1",
+  'x-ss-dp': "1340",
+  'x-ss-stub': "D97FED6E54ACBCB01CBD04D60D78EE74",
+  'x-tt-pba-enable': "1",
+  'sdk-version': "2",
+  'x-tt-token': "038177830ce0c43f82af4c49da908f2a5a00a8137948b4447b436216e36ee9185994d2d50d144a8467f75065d0c223889700b5144b8a30a8b5a8363effb3987a05fc979aae392d216a8b3dc5b05ad8b5cb77edaf461492fc26e0b2679d6bb48603c20--0a4e0a203e44b0bebac563135a47fd753eecfb2089f7800b3518a23319cf8e4a57c50513122039ebbc2fd303e31d10a8b5e4eab92793862efaebb622257af126082ff13a36981801220674696b746f6b-3.0.0",
+  'passport-sdk-version': "5050090",
+  'x-tt-ultra-lite': "1",
+  'x-vc-bdturing-sdk-version': "2.3.10.i18n",
+  'x-tt-store-region': "iq",
+  'x-tt-store-region-src': "uid",
+  'ttzip-tlb': "1",
+  'x-tt-pba-enable': "1",
+  'x-ladon': "e8lILvddIMMpuN+bOxIZhgn0uDdGcMkXtsgMtCoK9EWg6oIb",
+  'x-khronos': "1754669954",
+  'x-argus': "yMJqCX7vnfjCkrJiTadz12sS8EiiwXeG8czREr07tqKKN41qezzH2SAa1bpz36P+o4H5XaVyL1FSWr7lWKsthfpT+zsR7rF5WBNKrA+v7JoHj+DHRn0QYJU7fF1ho7P9S7nLe9f2SGzaHfzAoLrRp1yZzOrAg6HVF8Y0zaWEN+kk4Hbe125W6JLdNyiJ2fFwRZD58iicz2xUsiQpon3RFokIDinSzDYGa41NvRfI4n9bXrScPE+NcqmyxzlCbLKdlIivsBqmVerZMMadGMeMVFM4tMAL30Llhn3ZQiD303DfZdNiCpkbTbqjsguWYycmX+b+I3jzQzWdwUZPDLy0arpZZuewNvFvJSTc8EYxuEyA5YnbUlDyQWXsfcfOMuZ/csToe4pBC83A39tgjIQUtIF/F673JOgOxn0+FfLumvOxgasCzXgI/LINHrnqAziVEbSiZvWw5MJsLjWmOcP/763b7lC2ynRasiCJplrlIJCdBQICR1nyN/HLt8qmMoumIyhqb6PmBvwNwigiZfUElekKHbRSDK5htyzW+P02aZsaRlgEkBdC2E22XKi4gVeyPL9WyTHt4gz1+DAdgV9Fm6eI0td5DPEy4RYyI7SRSgHQUQ==",
+  'x-gorgon': "8404e0ee1000f23eeae55adc68d6de0a2433339670a7848a33cc",
+  'Cookie': "store-idc=alisg; store-country-code=iq; install_id=7506830991753021202; ttreq=1$604e8a4b423c7db8e2e8318e4183a66531ceebbf; tt-target-idc=useast1a; passport_csrf_token=d5a7d12c4fc536f909b4138d5c49f766; passport_csrf_token_default=d5a7d12c4fc536f909b4138d5c49f766; d_ticket=56012d7c6282bb28e4ec9cb6dbcbdc31ddbb9; cmpl_token=AgQQAPOnF-ROXbg7nMu9P10x_mAmb48J_4csYN5_JQ; sid_guard=8177830ce0c43f82af4c49da908f2a5a%7C1753371912%7C15552000%7CTue%2C+20-Jan-2026+15%3A45%3A12+GMT; uid_tt=ce25cd8b3620b53be3a942c3ecd8422379a5fe4e2e1ba0d0d65e7bbe7df8c299; uid_tt_ss=ce25cd8b3620b53be3a942c3ecd8422379a5fe4e2e1ba0d0d65e7bbe7df8c299; sid_tt=8177830ce0c43f82af4c49da908f2a5a; sessionid=8177830ce0c43f82af4c49da908f2a5a; sessionid_ss=8177830ce0c43f82af4c49da908f2a5a; store-country-code-src=uid; tt-target-idc-sign=AmY3znHpUTSweUy0EzvErtupnkkG6T6f7nZWCRq9CleixZE6Tuz0f8sxcrKshKPKoM4d1xRZDEOGRKVO7T35p1_XW9PQOABG0l6Rs_Mo6IhHaBuSWzTkxeNwlkzIg9PsyTqZCZ-mVAWgIvlCY1aXrRML0ONH8wurRhtmdD7E_dU4CTnXjbLvAeuqFZw1HGsRdg9S4JtCAiOyCiLHG2nCrM2wm3_0lxkC-EPC1lrJUCY8VG5aGOo0K6SOBixZPDH9bohwKoEWmZlsETIg7a8eoNcMwmECW3HOvm2cKEYRf43V37GZ9W1OSELIaYFeQ8I6XgLu78npzQRLgUfKUDsHljyezEtsn2VFp54ApDA8nB8N2iPkEzmImfAgwFn9-ecW6_5QHRKZuHTbh0k0h9cX8ubwyy79eLxzbo7Zt8nFHnpJWBJyEMWp6TG7quZNQoE-go8Wgj14naaBiZ_w6JwDarYsITVKAZvA6WxNUfZKlANASWk_87qfG73MTv73_eB0; odin_tt=a43a32a50b97c353dbd82e77dc3cfd20d38da1033aa87da9377080555c09e7dfc1008895b82f4bb1607251aec8fcb805f06e573d44bfa0b59efbecb526bb19887c083f720a9b8ff9bfa571a0d84fde59; msToken=_U4ysknn25xHUcLtyk7qWqCciWkkvJJxbUYKdZE_wV3C1FnGR7VMS3N6kzXHOn5GrsLKd7ZekMkyXSg2TPDM5j_YD-HBp95ogXmmaWToGsuC4OMg0R-2pYGR; store-country-sign=MEIEDIX6PJPKq2kN9PaxhwQgWWefjTbv3JYQ5qM9Ch9TPRqgqz8qyABqVFVg0gZ1S4gEEDaMoqRz_XoUCfaR5MD0TB8"
+}
+
+response = requests.post(url, data=payload, headers=headers)
+
+print(response.text)
